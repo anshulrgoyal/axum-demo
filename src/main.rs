@@ -11,8 +11,6 @@ use std::{
     net::SocketAddr, str::FromStr,
 };
 
-use tracing::{instrument, Level};
-
 #[tokio::main]
 async fn main() {
     let app = Router::new()
@@ -44,10 +42,9 @@ struct User {
     username: String,
 }
 
-#[instrument]
+
 // basic handler that responds with a static string
 async fn root() -> &'static str {
-    tracing::trace!("{} {}", Level::INFO, "done");
     "Hello, World!"
 }
 
