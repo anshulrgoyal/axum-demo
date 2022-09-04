@@ -29,4 +29,5 @@ jobs:
         heroku_email: "anshulgoel151999@gmail.com"
         appdir: "./app"
         procfile: "./axum"
+        buildpack: "https://github.com/ph3nx/heroku-binary-buildpack.git"
   
